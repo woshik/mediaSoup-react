@@ -15,7 +15,9 @@ const App = (props) => {
 
   useEffect(() => {
     Room.preload();
-
+    props.history.push({
+      search: '?forceTcp=true',
+    });
     return;
   }, []);
 
