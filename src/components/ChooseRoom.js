@@ -124,7 +124,7 @@ const ChooseRoom = ({ classes }) => {
         </DialogContent>
 
         <DialogActions>
-          <Button component={Link} to={`/${roomId}`} variant="contained" color="secondary">
+          <Button component={Link} to={`/${roomId}?forceTcp=true`} variant="contained" color="secondary">
             <FormattedMessage id="label.chooseRoomButton" defaultMessage="Continue" />
           </Button>
         </DialogActions>
