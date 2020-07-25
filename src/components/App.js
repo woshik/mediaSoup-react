@@ -14,10 +14,11 @@ const App = (props) => {
   const id = useParams().id.toLowerCase();
 
   useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (!urlParams.get('forceTcp')) {
+      window.location = window.location + '?forceTcp=true';
+    }
     Room.preload();
-    props.history.push({
-      search: '?forceTcp=true',
-    });
     return;
   }, []);
 
