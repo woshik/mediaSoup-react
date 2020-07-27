@@ -15,7 +15,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import Popover from '@material-ui/core/Popover';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Avatar from '@material-ui/core/Avatar';
@@ -36,7 +35,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import HelpIcon from '@material-ui/icons/Help';
 import InfoIcon from '@material-ui/icons/Info';
-import logo from '../../images/authentication_forms_logo.png';
+import logo from '../../images/w2-white.png';
 
 const styles = (theme) => ({
   persistentDrawerOpen: {
@@ -66,7 +65,7 @@ const styles = (theme) => ({
   logo: {
     display: 'none',
     marginLeft: 20,
-    maxWidth: '60px',
+    maxWidth: '100px',
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
@@ -259,9 +258,6 @@ const TopBar = (props) => {
             </IconButton>
           </PulsingBadge>
           <img alt="Logo" className={classes.logo} src={logo} />
-          <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-            {window.config.title ? window.config.title : 'Multiparty meeting'}
-          </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
             <Tooltip
